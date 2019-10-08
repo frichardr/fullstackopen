@@ -1,0 +1,16 @@
+note over browser:
+assume spa page already loaded:
+user inputs content as "text"
+user clicks on "Save", triggering POST request
+POST body contains content and date
+end note
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+browser-->server: body: {"content":"text","date":"YYYY-MM-DD"}
+server-->browser:  201/Created
+
+note over browser:
+browser executes js response code
+element sent in POST is added to list
+js-code renders page
+end note
